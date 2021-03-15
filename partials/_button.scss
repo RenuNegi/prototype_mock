@@ -1,0 +1,22 @@
+.btn {
+  border-radius: 0.313em;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid $color-blue;
+  color: $color-white;
+  font-size: 0.875em;
+  padding: 5px 14px;
+  background: -webkit-linear-gradient(top, #9bc7e6 0, $color-blue 50%);
+  display: block;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-blue-dark;
+    color: #fff;
+    background-image: -webkit-linear-gradient(
+      top,
+      $color-blue,
+      $color-blue-dark 50%
+    );
+  }
+}

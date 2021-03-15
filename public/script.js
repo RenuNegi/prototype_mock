@@ -13,29 +13,30 @@ $(document).ready(function() {
 
   var $button = $(".btn__hamburger");
   var isMenuOpen = false;
-  var elementToToggle = $(".header--topNav");
-  var elementToToggle1 = $(".header--nav_container");
-  var elementToToggle2 = $(".header--searchInput");
+  var elementToToggle = $(".header--collapsible");
+  var isHidden = $(".header__logoBox");
 
   $button.on("click", function() {
     isMenuOpen = !isMenuOpen;
 
     $button.attr("aria-expanded", isMenuOpen);
     elementToToggle.toggle();
-    elementToToggle1.toggle();
-    elementToToggle2.toggle();
   });
 
   $(window).resize(function() {
-    var windowWidth = $(window).width();
+    globalResize();
+  });
+
+  var globalResize = function() {
+    var windowWidth = window.innerWidth;
     if (windowWidth <= 768) {
       elementToToggle.hide();
-      elementToToggle1.hide();
-      elementToToggle2.hide();
+      isHidden.addClass("hidden");
     } else {
       elementToToggle.show();
-      elementToToggle1.show();
-      elementToToggle2.show();
+      isHidden.removeClass("hidden");
     }
-  });
+  };
+
+  globalResize();
 });

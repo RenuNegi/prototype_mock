@@ -1,0 +1,24 @@
+.skip-button {
+  position: absolute;
+  height: 1px;
+  width: 10px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+  &:focus {
+    background-color: #000;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: $color-white;
+    display: block;
+    height: auto;
+    left: 5px;
+    font-size: 1em;
+    line-height: 1.2;
+    padding: 10px 15px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+  }
+}

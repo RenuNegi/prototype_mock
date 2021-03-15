@@ -1,5 +1,4 @@
 const { src, dest, series } = require("gulp");
-var twig = require("gulp-twig");
 var sass = require("gulp-sass");
 sass.compiler = require("node-sass");
 const del = require("del");
@@ -22,16 +21,7 @@ function copyFonts(done) {
 }
 
 function compile() {
-  return src("*.twig")
-    .pipe(
-      twig({
-        data: {
-          title: "Gulp and Twig",
-          benefits: ["Fast", "Flexible", "Secure"]
-        }
-      })
-    )
-    .pipe(dest("public"));
+  return src(["index.html"]).pipe(dest("public/"));
 }
 
 function sassCompile() {
@@ -51,7 +41,7 @@ function webserverTask() {
 
 function watchTask() {
   return watch(
-    ["*.twig", "*.scss", "*.js", "img/**", "partials/**", "fonts/**"],
+    ["*.html", "*.scss", "*.js", "img/**", "partials/**", "fonts/**"],
     series(clean, compile, copy, copyImages, sassCompile, copyFonts)
   );
 }

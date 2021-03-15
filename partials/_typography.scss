@@ -1,0 +1,55 @@
+//font declarartion
+
+@font-face {
+  font-family: "FidelitySans";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: condensed;
+  src: url("fonts/FidelitySans-Regular.woff");
+}
+@font-face {
+  font-family: "FidelitySans";
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: condensed;
+  src: url("fonts/FidelitySans-Bold.woff");
+}
+@font-face {
+  font-family: "FidelitySans";
+  font-style: normal;
+  font-stretch: condensed;
+  font-weight: 300;
+  src: url("fonts/FidelitySans-Light.woff");
+}
+body {
+  font-family: "FidelitySans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+h1 {
+  font-family: "FidelitySans", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-size: 1.75em;
+  line-height: 1.2;
+}
+h2 {
+  font-family: "FidelitySans", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-size: 1.125em;
+  line-height: 1.2;
+}
+h3 {
+  font-family: "FidelitySans", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-stretch: condensed;
+  font-size: 0.875em;
+  line-height: 1.2;
+}

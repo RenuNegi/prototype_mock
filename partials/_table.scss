@@ -1,0 +1,127 @@
+.table__container {
+  background-color: $color-white;
+  margin-top: 2em;
+  padding: 0 10px;
+  .table__header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625em 0 0.25em 0.313em;
+  }
+  table {
+    padding: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  caption {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+  }
+  .table__main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 360px;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+  .table__main::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  .table__main::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  .table__main::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    outline: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  tbody,
+  thead {
+    border-bottom: 1px solid $color-light-grey;
+    tr {
+      text-align: left;
+    }
+    tr.grey-row {
+      background-color: $color-grey;
+    }
+    th {
+      border-right: 1px solid $color-light-grey;
+      border-bottom: 1px solid $color-light-grey;
+      padding: 7px 5px 7px 10px;
+      font-size: 0.75em;
+      font-weight: bold;
+      /*sticky table header*/
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    td {
+      border-right: 1px solid $color-light-grey;
+      border-bottom: 1px solid $color-light-grey;
+      padding: 10px;
+      font-size: 0.75em;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    .td__last_item {
+      display: flex;
+      span {
+        padding-right: 5px;
+      }
+
+      /*table profit progress bar*/
+
+      .profit__progressbar {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #dbdbdb;
+        width: 150px;
+        height: 7px;
+        position: relative;
+        margin-top: 5px;
+        .progress__bar_meter {
+          position: absolute;
+          background-color: #044a7a;
+          left: 0;
+          height: 7px;
+          z-index: 1;
+        }
+        .progress__meter {
+          border: 1px solid #dbdbdb;
+          background-color: #dbdbdb;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+.table__bottomBar ul {
+  display: flex;
+  li {
+    padding: 10px 20px;
+    font-size: 0.875em;
+  }
+  .checkbox__label {
+    color: #000;
+  }
+}
+
+@media (max-width: 600px) {
+  .table__container .table__main {
+    overflow-x: auto;
+  }
+}

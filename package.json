@@ -4,7 +4,9 @@
   "description": "assignment",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +16,7 @@
   "dependencies": {
     "del": "^6.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-twig": "^1.2.0",
     "gulp-webserver": "^0.9.1",
-    "node-sass": "^5.0.0",
-    "twig": "^1.15.4"
+    "node-sass": "^5.0.0"
   }
 }

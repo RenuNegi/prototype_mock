@@ -1,0 +1,41 @@
+.link-auxiliary {
+  display: inline-block;
+  position: relative;
+  padding-right: 0.7em;
+  font-family: "FidelitySans";
+  a {
+    text-decoration: none;
+    color: $color-blue;
+    font-size: 1em;
+    font-weight: normal;
+    position: relative;
+    &:after {
+      background-image: url(img/icon_arrow_right.png);
+      background-size: 8px 16px;
+      display: inline-block;
+      width: 8px;
+      height: 16px;
+      content: "";
+      position: relative;
+      top: 3px;
+      left: 4px;
+    }
+    &:hover,
+    &:focus,
+    &:visited {
+      text-decoration: underline;
+      color: $color-blue;
+    }
+  }
+  img {
+    width: 7px;
+    padding-left: 8px;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 600px) {
+  .link-auxiliary a {
+    font-size: 0.75em;
+  }
+}
